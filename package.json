@@ -8,13 +8,19 @@
     "@testing-library/user-event": "^7.2.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-scripts": "^5.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "CI=true react-scripts test --colors",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prehello": "echo 'before hello!'",
+    "posthello": "echo 'post hello!'",
+    "hello": "echo 'hello!'",
+    "predeploy": "npm run build",
+    "deploy": "vercel --prod"
   },
   "eslintConfig": {
     "extends": "react-app"
